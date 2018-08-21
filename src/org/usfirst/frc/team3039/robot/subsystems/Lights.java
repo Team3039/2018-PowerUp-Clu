@@ -13,9 +13,9 @@ public class Lights extends Subsystem {
     public DigitalOutput armLedOne = new DigitalOutput(RobotMap.armLightInput1);
     public DigitalOutput armLedTwo = new DigitalOutput(RobotMap.armLightInput2);
     
-    public static boolean red = true;
-    public static boolean green = false;
-    //public static String color = "";
+    public boolean red = true;
+    public boolean green = false;
+    public String color = "";
     
     public void setRedAsDefault(boolean redLights)
     {
@@ -26,14 +26,14 @@ public class Lights extends Subsystem {
     	armLedOne.set(true);
     	armLedTwo.set(false);
     	green = true;
-    	//color = "green";
+    	color = "green";
     }
     
     public void armRaised() {
     	if(green) {
     		armLedOne.set(false);
         	armLedTwo.set(true);
-        	//color = "yellow";
+        	color = "yellow";
     	}
     }
 
@@ -41,12 +41,12 @@ public class Lights extends Subsystem {
     	if(red) {
     		armLedOne.set(false);
         	armLedTwo.set(false);
-        	//color = "red";
+        	color = "red";
     	}
     	else {
     		armLedOne.set(true);
         	armLedTwo.set(true);
-        	//color = "blue";
+        	color = "blue";
     	}
     	green = false;
     }
@@ -59,11 +59,11 @@ public class Lights extends Subsystem {
     	return armLedTwo.get();
     }
     
-    /*
+    
     public String getColor() {
     	return color;
     }
-    */
+    
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.

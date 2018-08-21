@@ -33,7 +33,6 @@ public class Robot extends TimedRobot {
     SendableChooser<String> teamChooser;
     
 	static String gameInfo = "   " ;
-	//static boolean redTeam = true;
 
 	@Override
 	public void robotInit() {
@@ -45,7 +44,7 @@ public class Robot extends TimedRobot {
 	
 		
 		//Auto Chooser
-		SmartDashboard.putData("Auto Mode", chooser);		
+		SmartDashboard.putData("Auto Mode", chooser);
 		chooser.addDefault("Forward", new AutoForward());
 		chooser.addObject("Center", new AutoCenter());
 		chooser.addObject("Left", new AutoLeft());
@@ -57,7 +56,7 @@ public class Robot extends TimedRobot {
 		usbCamera.setVideoMode(VideoMode.PixelFormat.kYUYV, 640, 360, 60);
 		usbCamera.setWhiteBalanceAuto();
 
-		
+		SmartDashboard.putBoolean("Red Team", true);
 	}
 	
 	@Override
@@ -121,6 +120,7 @@ public class Robot extends TimedRobot {
 		if (autonomousCommand != null) {
 			autonomousCommand.cancel();
 		}
+		
 		//setDefaultLights();
 	}
 
@@ -131,6 +131,7 @@ public class Robot extends TimedRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		System.out.println("Arm Piston :: " + Robot.arm.getArmPistion());
+		System.out.println("Red team :: " + SmartDashboard.getBoolean("Red Team", true));
 	}
 
 	/**
