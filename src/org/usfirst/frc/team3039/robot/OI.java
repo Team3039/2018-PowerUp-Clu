@@ -78,8 +78,10 @@ public class OI {
 //		L1.whileHeld(new ShootCubeSlow());
 //		R1.whileHeld(new ShootCube());
 				
-		buttonSquare.toggleWhenPressed(new GetCube());
-		
+//		L2.whileHeld(new GetCube());
+		R2.whileHeld(new GetCube());
+//		
+//		buttonSquare.toggleWhenPressed(new RaiseArm());
 //
 //		
 //		//CoPilot Controls

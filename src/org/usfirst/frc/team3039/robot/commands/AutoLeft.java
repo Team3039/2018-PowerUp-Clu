@@ -22,24 +22,34 @@ public class AutoLeft extends CommandGroup {
 
     	if (gameInfo.charAt(0) == 'L' && gameInfo.charAt(1) == 'L') {
     		addSequential(new MoveForward(), 1.3);
+    		addSequential(new ShootCube(), 1.5);
     	}
     	
     	else if (gameInfo.charAt(0) == 'R' && gameInfo.charAt(1) == 'L') {
-    		addSequential(new TurnRightTank(), 1.3);
+//    		addSequential(new TurnRightTank(), 1.3);
+//    		addSequential(new MoveForward(), .8);
+//    		addSequential(new TurnLeftTank(), .95);
     		addSequential(new MoveForward(), .8);
-    		addSequential(new TurnLeftTank(), .95);  	
+    		addSequential(new TurnLeftTank(), .95);
+    		addSequential(new MoveForward(), .4);
+    		addSequential(new TurnRightTank(), .95);
+    		addSequential(new MoveForward(), .4);
     	}
     	
     	else if (gameInfo.charAt(0) == 'L' && gameInfo.charAt(1) == 'R') {
     		addSequential(new MoveForward(), 1.3);
-
+    		addSequential(new ShootCube(), 1.5);
     	}
     	
     	else if (gameInfo.charAt(0) == 'R' && gameInfo.charAt(1) == 'R') {
-      		addSequential(new TurnRightTank(), 1.3);
+//    		addSequential(new TurnRightTank(), 1.3);
+//    		addSequential(new MoveForward(), .8);
+//    		addSequential(new TurnLeftTank(), .95);
     		addSequential(new MoveForward(), .8);
-    		addSequential(new TurnLeftTank(), .95);  	
-    	}
+    		addSequential(new TurnLeftTank(), .95);
+    		addSequential(new MoveForward(), .4);
+    		addSequential(new TurnRightTank(), .95);
+    		addSequential(new MoveForward(), .4);}
    
     	else {
     		System.out.println("Drive Forward");

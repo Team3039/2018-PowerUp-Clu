@@ -21,29 +21,48 @@ public class AutoCenter extends CommandGroup {
        		if(!gameInfo.equals(null)) {
 
     	if (gameInfo.charAt(0) == 'L' && gameInfo.charAt(1) == 'L') {
-    		addSequential(new TurnLeftTank(), .75);
-    		addSequential(new MoveForward(), .85);
-    		addSequential(new TurnRightTank(), .7);
+//    		addSequential(new TurnLeftTank(), .75);
+//    		addSequential(new MoveForward(), .85);
+//    		addSequential(new TurnRightTank(), .7);
+    		addSequential(new MoveForward(), .8);
+    		addSequential(new TurnLeftTank(), .9);
+    		addSequential(new MoveForward(), .4);
+    		addSequential(new TurnRightTank(), .9);
+    		addSequential(new MoveForward(), .4);
     	}
     	
     	else if (gameInfo.charAt(0) == 'R' && gameInfo.charAt(1) == 'L') {
-    		addSequential(new TurnRightTank(), .75);
-    		addSequential(new MoveForward(), .85);
-    		addSequential(new TurnLeftTank(), .7);
+//    		addSequential(new TurnRightTank(), .75);
+//    		addSequential(new MoveForward(), .85);
+//    		addSequential(new TurnLeftTank(), .7);
+    		addSequential(new MoveForward(), .8);
+     		addSequential(new TurnRightTank(), .9);
+    		addSequential(new MoveForward(), .4);
+    		addSequential(new TurnLeftTank(), .9);
+    		addSequential(new MoveForward(), .4);
     	}
     	
     	else if (gameInfo.charAt(0) == 'L' && gameInfo.charAt(1) == 'R') {
-    		addSequential(new TurnLeftTank(), .75);
-    		addSequential(new MoveForward(), .85);
-    		addSequential(new TurnRightTank(), .7);
+//    		addSequential(new TurnLeftTank(), .75);
+//    		addSequential(new MoveForward(), .85);
+//    		addSequential(new TurnRightTank(), .7);
+    		addSequential(new MoveForward(), .8);
+    		addSequential(new TurnLeftTank(), .9);
+    		addSequential(new MoveForward(), .4);
+    		addSequential(new TurnRightTank(), .9);
+    		addSequential(new MoveForward(), .4);
 
     	}
     	
     	else if (gameInfo.charAt(0) == 'R' && gameInfo.charAt(1) == 'R') {
-    		addSequential(new TurnRightTank(), .75);
-    		addSequential(new MoveForward(), .85);
-    		addSequential(new TurnLeftTank(), .7);
-    		addSequential(new TurnLeft());
+//    		addSequential(new TurnRightTank(), .75);
+//    		addSequential(new MoveForward(), .85);
+//    		addSequential(new TurnLeftTank(), .7);
+    		addSequential(new MoveForward(), .8);
+     		addSequential(new TurnRightTank(), .9);
+    		addSequential(new MoveForward(), .4);
+    		addSequential(new TurnLeftTank(), .9);
+    		addSequential(new MoveForward(), .4);
 
     	}
    

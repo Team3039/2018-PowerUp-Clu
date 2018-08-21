@@ -15,7 +15,7 @@ public class Lights extends Subsystem {
     
     public static boolean red = true;
     public static boolean green = false;
-    public static String color = "";
+    //public static String color = "";
     
     public void setRedAsDefault(boolean redLights)
     {
@@ -26,27 +26,27 @@ public class Lights extends Subsystem {
     	armLedOne.set(true);
     	armLedTwo.set(false);
     	green = true;
-    	color = "green";
+    	//color = "green";
     }
     
     public void armRaised() {
-    	if(green == true) {
+    	if(green) {
     		armLedOne.set(false);
         	armLedTwo.set(true);
-        	color = "yellow";
+        	//color = "yellow";
     	}
     }
 
     public void defaultLights() {
-    	if(red == true) {
+    	if(red) {
     		armLedOne.set(false);
         	armLedTwo.set(false);
-        	color = "red";
+        	//color = "red";
     	}
     	else {
     		armLedOne.set(true);
         	armLedTwo.set(true);
-        	color = "blue";
+        	//color = "blue";
     	}
     	green = false;
     }
@@ -59,9 +59,11 @@ public class Lights extends Subsystem {
     	return armLedTwo.get();
     }
     
+    /*
     public String getColor() {
     	return color;
     }
+    */
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.

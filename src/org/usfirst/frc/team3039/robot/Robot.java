@@ -25,15 +25,15 @@ public class Robot extends TimedRobot {
 	public static final Drivetrain drivetrain = new Drivetrain();
 	public static final Arm arm = new Arm();
 	public static final Intake intake = new Intake();
-//	public static final Lights lights = new Lights();
+	//public static final Lights lights = new Lights();
 
 	//Auto Setup
 	Command autonomousCommand;
     SendableChooser<CommandGroup> chooser;
-//    SendableChooser<String> teamChooser;
+    SendableChooser<String> teamChooser;
     
 	static String gameInfo = "   " ;
-
+	//static boolean redTeam = true;
 
 	@Override
 	public void robotInit() {
@@ -51,9 +51,6 @@ public class Robot extends TimedRobot {
 		chooser.addObject("Left", new AutoLeft());
 		chooser.addObject("Right", new AutoRight());
 		
-//		SmartDashboard.putData("Team Color", teamChooser);
-//		teamChooser.addDefault("Red Team", "Red");
-//		teamChooser.addObject("Blue Team", "Blue");
 		
 		//Camera Setup
 		UsbCamera usbCamera = CameraServer.getInstance().startAutomaticCapture();
@@ -80,17 +77,13 @@ public class Robot extends TimedRobot {
 		Robot.arm.resetEncoder();
 	}
 
-//	public void setDefaultLights()
-//	{
-//		if(teamChooser.getSelected().equals("Blue"))
-//		{
-//			Robot.lights.setRedAsDefault(false);
-//		}
-//		else
-//		{
-//			Robot.lights.setRedAsDefault(true);
-//		}
-//	}
+	/*
+	public void setDefaultLights()
+	{
+		Robot.lights.setRedAsDefault(SmartDashboard.getBoolean("Red team", true));
+		
+	}
+	*/
 
 	@Override
 	public void autonomousInit() {
@@ -105,7 +98,7 @@ public class Robot extends TimedRobot {
 		if (autonomousCommand != null) {
 			autonomousCommand.start();
 		}
-//		setDefaultLights();
+		//setDefaultLights();
 	}
 	
 
@@ -128,7 +121,7 @@ public class Robot extends TimedRobot {
 		if (autonomousCommand != null) {
 			autonomousCommand.cancel();
 		}
-//		setDefaultLights();
+		//setDefaultLights();
 	}
 
 	/**
