@@ -44,7 +44,7 @@ public class RobotMap {
 	public static int armPiston = 0;
 	
 	// Lights
-	public static int armLightInput1 = 0;
-	public static int armLightInput2 = 1;
+	public static int armLightInput1 = 6;
+	public static int armLightInput2 = 7;
 	
 }

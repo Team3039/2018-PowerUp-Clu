@@ -22,8 +22,13 @@ public class Intake extends Subsystem {
 	}
 	
 		public void getCube() {
-			leftIntakeMotor.set(-.40);
-			rightIntakeMotor.set(.40);
+			leftIntakeMotor.set(-.60);
+			rightIntakeMotor.set(.60);
+		}
+		
+		public void testCube() {
+			leftIntakeMotor.set(-.20);
+			rightIntakeMotor.set(.20);
 		}
 		
 		public void shootCube() {

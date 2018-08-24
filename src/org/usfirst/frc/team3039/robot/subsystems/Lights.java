@@ -20,6 +20,14 @@ public class Lights extends Subsystem {
     public void setRedAsDefault(boolean redLights)
     {
     	red = redLights;
+    	if(redLights)
+    	{
+    		color = "Red";
+    	}
+    	else
+    	{
+    		color = "Blue";
+    	}
     }
     
     public void cubeGrabbed() {
