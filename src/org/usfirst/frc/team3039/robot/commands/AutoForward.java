@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class AutoForward extends CommandGroup {
 
     public AutoForward() {
-		addSequential(new MoveForward(), 1.1);
+    	addSequential(new MoveForward(), 2);
 
     }
 }

@@ -5,7 +5,6 @@ import org.usfirst.frc.team3039.robot.commands.GetCube;
 import org.usfirst.frc.team3039.robot.commands.RaiseArm;
 import org.usfirst.frc.team3039.robot.commands.ShootCube;
 import org.usfirst.frc.team3039.robot.commands.ShootCubeSlow;
-import org.usfirst.frc.team3039.robot.commands.TestCube;
 
 import com.team3039.util.PS4Copad;
 import com.team3039.util.PS4Gamepad;
@@ -79,8 +78,8 @@ public class OI {
 //		L1.whileHeld(new ShootCubeSlow());
 //		R1.whileHeld(new ShootCube());
 				
-		L2.whileHeld(new GetCube());
-		R2.whileHeld(new TestCube());
+//		L2.whileHeld(new GetCube());
+		R2.whileHeld(new GetCube());
 //		
 //		buttonSquare.toggleWhenPressed(new RaiseArm());
 //

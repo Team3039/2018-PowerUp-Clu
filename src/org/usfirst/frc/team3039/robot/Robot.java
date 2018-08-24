@@ -8,7 +8,6 @@ import org.usfirst.frc.team3039.robot.commands.AutoRight;
 import org.usfirst.frc.team3039.robot.subsystems.Arm;
 import org.usfirst.frc.team3039.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team3039.robot.subsystems.Intake;
-import org.usfirst.frc.team3039.robot.subsystems.Lights;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.cscore.VideoMode;
@@ -26,11 +25,12 @@ public class Robot extends TimedRobot {
 	public static final Drivetrain drivetrain = new Drivetrain();
 	public static final Arm arm = new Arm();
 	public static final Intake intake = new Intake();
-	public static final Lights lights = new Lights();
+	//public static final Lights lights = new Lights();
 
 	//Auto Setup
 	Command autonomousCommand;
     SendableChooser<CommandGroup> chooser;
+    SendableChooser<String> teamChooser;
     
 	static String gameInfo = "   " ;
 
@@ -76,13 +76,13 @@ public class Robot extends TimedRobot {
 		Robot.arm.resetEncoder();
 	}
 
-	
+	/*
 	public void setDefaultLights()
 	{
-		Robot.lights.setRedAsDefault(SmartDashboard.getBoolean("Red Team", true));
+		Robot.lights.setRedAsDefault(SmartDashboard.getBoolean("Red team", true));
 		
 	}
-	
+	*/
 
 	@Override
 	public void autonomousInit() {
@@ -97,7 +97,7 @@ public class Robot extends TimedRobot {
 		if (autonomousCommand != null) {
 			autonomousCommand.start();
 		}
-		setDefaultLights();
+		//setDefaultLights();
 	}
 	
 
@@ -120,7 +120,8 @@ public class Robot extends TimedRobot {
 		if (autonomousCommand != null) {
 			autonomousCommand.cancel();
 		}
-		setDefaultLights();
+		
+		//setDefaultLights();
 	}
 
 	/**
@@ -129,14 +130,8 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-		setDefaultLights();
-		if(!Robot.lights.green)
-			{
-				Robot.lights.defaultLights();
-			}
 		System.out.println("Arm Piston :: " + Robot.arm.getArmPistion());
-		System.out.println("Color :: " + Robot.lights.getColor());
-		
+		System.out.println("Red team :: " + SmartDashboard.getBoolean("Red Team", true));
 	}
 
 	/**

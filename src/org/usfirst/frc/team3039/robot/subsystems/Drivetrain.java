@@ -40,17 +40,17 @@ public class Drivetrain extends Subsystem {
 	    }
 	
 	public void driveForward() {
-		leftTopDriveMotor.set(.7); 
-		leftBottomDriveMotor.set(.7); 
-		rightTopDriveMotor.set(-.7);
-		rightBottomDriveMotor.set(-.7); 
+		leftTopDriveMotor.set(.85); 
+		leftBottomDriveMotor.set(.85); 
+		rightTopDriveMotor.set(-.85);
+		rightBottomDriveMotor.set(-.85); 
 	}
 	
 	public void driveBackward() {
-		leftTopDriveMotor.set(-.75);
-		leftBottomDriveMotor.set(-.75);
-		rightTopDriveMotor.set(.75);
-		rightBottomDriveMotor.set(.75);
+		leftTopDriveMotor.set(-.85);
+		leftBottomDriveMotor.set(-.85);
+		rightTopDriveMotor.set(.85);
+		rightBottomDriveMotor.set(.85);
 	}
 	
 	public void turnRightTank() {
