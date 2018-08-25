@@ -3,6 +3,7 @@ package org.usfirst.frc.team3039.robot;
 
 import org.usfirst.frc.team3039.robot.commands.GetCube;
 import org.usfirst.frc.team3039.robot.commands.RaiseArm;
+import org.usfirst.frc.team3039.robot.commands.SetDrivetrainSpeed;
 import org.usfirst.frc.team3039.robot.commands.ShootCube;
 import org.usfirst.frc.team3039.robot.commands.ShootCubeSlow;
 import org.usfirst.frc.team3039.robot.commands.TestCube;
@@ -81,6 +82,9 @@ public class OI {
 				
 		L2.whileHeld(new GetCube());
 		R2.whileHeld(new TestCube());
+		
+		buttonSquare.toggleWhenPressed(new SetDrivetrainSpeed());
+		
 //		
 //		buttonSquare.toggleWhenPressed(new RaiseArm());
 //

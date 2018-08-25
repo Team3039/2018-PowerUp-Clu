@@ -6,9 +6,9 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 /**
  *
  */
-public class AutoRight extends CommandGroup {
+public class AutoLeftSide extends CommandGroup {
 
-    public AutoRight() {
+    public AutoLeftSide() {
     	String gameInfo;
     	gameInfo = DriverStation.getInstance().getGameSpecificMessage();
     	int count = 0;
@@ -22,27 +22,21 @@ public class AutoRight extends CommandGroup {
 
        			
        			
-       			
     	if (gameInfo.charAt(0) == 'L') {
-    		addSequential(new MoveForward(), .18);
-    		addSequential(new DelayMovement(), .2);
-    		addSequential(new TurnLeftTank(), 1.4);
-    		addSequential(new DelayMovement(), .2);
-    		addSequential(new MoveForward(), .55);
-    		addSequential(new DelayMovement(), .5);
+    		addSequential(new MoveForward(), 1.4);
+    		addSequential(new DelayMovement(), .3);
     		addSequential(new TurnRightTank(), 1.4);
-    		addSequential(new DelayMovement(), .2);
-    		addSequential(new MoveForward(), .2);
-    		addSequential(new DelayMovement(), .2);
+    		addSequential(new DelayMovement(), .3);
     		addSequential(new ShootCubeSlow(), 1.5);
+    		
     	}
     	
     	else if (gameInfo.charAt(0) == 'R') {
-    		addSequential(new MoveForward(), 1.05);
-    		addSequential(new ShootCubeSlow(), 1.5);
+    		addSequential(new DelayMovement(), 3);
+    		addSequential(new MoveForward(), 1.10);
     	}
     	
-    	
+   
     	else {
     		System.out.println("Drive Forward");
     		addSequential(new MoveForward(), 1.1);

@@ -4,7 +4,11 @@ package org.usfirst.frc.team3039.robot;
 import org.usfirst.frc.team3039.robot.commands.AutoCenter;
 import org.usfirst.frc.team3039.robot.commands.AutoForward;
 import org.usfirst.frc.team3039.robot.commands.AutoLeft;
+import org.usfirst.frc.team3039.robot.commands.AutoLeftOnly;
+import org.usfirst.frc.team3039.robot.commands.AutoLeftSide;
 import org.usfirst.frc.team3039.robot.commands.AutoRight;
+import org.usfirst.frc.team3039.robot.commands.AutoRightOnly;
+import org.usfirst.frc.team3039.robot.commands.AutoRightSide;
 import org.usfirst.frc.team3039.robot.subsystems.Arm;
 import org.usfirst.frc.team3039.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team3039.robot.subsystems.Intake;
@@ -49,6 +53,10 @@ public class Robot extends TimedRobot {
 		chooser.addObject("Center", new AutoCenter());
 		chooser.addObject("Left", new AutoLeft());
 		chooser.addObject("Right", new AutoRight());
+		chooser.addObject("Left Only", new AutoLeftOnly());
+		chooser.addObject("Right Only", new AutoRightOnly());
+		chooser.addObject("Left Side", new AutoLeftSide());
+		chooser.addObject("Right Side", new AutoRightSide());
 		
 		
 		//Camera Setup
@@ -56,6 +64,7 @@ public class Robot extends TimedRobot {
 		usbCamera.setVideoMode(VideoMode.PixelFormat.kYUYV, 640, 360, 60);
 		usbCamera.setWhiteBalanceAuto();
 
+		//Color Chooser
 		SmartDashboard.putBoolean("Red Team", true);
 	}
 	
@@ -91,6 +100,10 @@ public class Robot extends TimedRobot {
 		chooser.addObject("Center", new AutoCenter());
 		chooser.addObject("Left", new AutoLeft());
 		chooser.addObject("Right", new AutoRight());
+		chooser.addObject("Left Only", new AutoLeftOnly());
+		chooser.addObject("Right Only", new AutoRightOnly());
+		chooser.addObject("Left Side", new AutoLeftSide());
+		chooser.addObject("Right Side", new AutoRightSide());
 		
 		autonomousCommand = chooser.getSelected();
 
@@ -112,6 +125,10 @@ public class Robot extends TimedRobot {
 		chooser.addObject("Center", new AutoCenter());
 		chooser.addObject("Left", new AutoLeft());
 		chooser.addObject("Right", new AutoRight());
+		chooser.addObject("Left Only", new AutoLeftOnly());
+		chooser.addObject("Right Only", new AutoRightOnly());
+		chooser.addObject("Left Side", new AutoLeftSide());
+		chooser.addObject("Right Side", new AutoRightSide());
 	}
 
 	@Override

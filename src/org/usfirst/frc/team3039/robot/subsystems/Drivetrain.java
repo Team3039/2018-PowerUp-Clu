@@ -25,6 +25,8 @@ public class Drivetrain extends Subsystem {
 	
 	public DifferentialDrive drivetrain = new DifferentialDrive(rightDriveTrain, leftDriveTrain);
 	
+	public double speed = .75;
+	
 //	public Encoder driveEncoder = new Encoder(RobotMap.driveEncoderA, RobotMap.driveEncoderB);
 	
 	public void motorSafety(boolean enabled) {
@@ -36,7 +38,7 @@ public class Drivetrain extends Subsystem {
 	
 	public void driveTeleOp(PS4Gamepad gp) {
 	    //Tele-Op Driving
-	        drivetrain.arcadeDrive(gp.getLeftYAxis() * .95, gp.getRightXAxis() * .8);        
+	        drivetrain.arcadeDrive(gp.getLeftYAxis() * speed, gp.getRightXAxis() * .8);        
 	    }
 	
 	public void driveForward() {
@@ -86,6 +88,11 @@ public class Drivetrain extends Subsystem {
 		leftBottomDriveMotor.set(0);
 		rightTopDriveMotor.set(0);
 		rightBottomDriveMotor.set(0);
+	}
+	
+	
+	public void setSpeed(double drivetrainSpeed) {
+		speed = drivetrainSpeed;
 	}
 	
 	

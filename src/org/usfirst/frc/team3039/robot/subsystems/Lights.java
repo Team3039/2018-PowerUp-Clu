@@ -72,6 +72,7 @@ public class Lights extends Subsystem {
     	return color;
     }
     
+    
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.

@@ -2,13 +2,12 @@ package org.usfirst.frc.team3039.robot.commands;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.CommandGroup;
-
 /**
  *
  */
-public class AutoRight extends CommandGroup {
+public class AutoRightOnly extends CommandGroup {
 
-    public AutoRight() {
+	public AutoRightOnly() {
     	String gameInfo;
     	gameInfo = DriverStation.getInstance().getGameSpecificMessage();
     	int count = 0;
@@ -22,19 +21,8 @@ public class AutoRight extends CommandGroup {
 
        			
        			
-       			
     	if (gameInfo.charAt(0) == 'L') {
-    		addSequential(new MoveForward(), .18);
-    		addSequential(new DelayMovement(), .2);
-    		addSequential(new TurnLeftTank(), 1.4);
-    		addSequential(new DelayMovement(), .2);
-    		addSequential(new MoveForward(), .55);
-    		addSequential(new DelayMovement(), .5);
-    		addSequential(new TurnRightTank(), 1.4);
-    		addSequential(new DelayMovement(), .2);
-    		addSequential(new MoveForward(), .2);
-    		addSequential(new DelayMovement(), .2);
-    		addSequential(new ShootCubeSlow(), 1.5);
+    		addSequential(new MoveForward(), 1.1);
     	}
     	
     	else if (gameInfo.charAt(0) == 'R') {
@@ -42,7 +30,7 @@ public class AutoRight extends CommandGroup {
     		addSequential(new ShootCubeSlow(), 1.5);
     	}
     	
-    	
+   
     	else {
     		System.out.println("Drive Forward");
     		addSequential(new MoveForward(), 1.1);
@@ -58,5 +46,3 @@ public class AutoRight extends CommandGroup {
        	}
     }
 }
-
-
